@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae Maker</title>
+    <link rel="stylesheet" href="template_l.css">
+    <script src="jspdf.debug.js"></script>
+    <link rel="shortcut icon" type="image/jpg/png" href="images/LOGO-01.png"/>
+</head>
+<body>
+<div class="navCon">
+    <h2 class="siteTitle">Curriculum Vitae Creator</h2>
+    <div class="hamburger_men" onclick="hamburger()">
+        <a><svg class="hamMen" width="50px" height="45 px" viewBox="0 0 24 24" fill="030104" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        </svg></a>
+    </div>
+    <div class="navBar">
+        <ul class="nav" id="linkList">
+            <li class="home"><a href="Home.html">Home</a></li>
+            <li class="design"><a href="Designing.html">Designing</a></li>
+            <li class="portfo"><a href="portfolio.html">Portfolio</a></li>
+            <li class="logout"><a href="signup.html">Log-out</a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrapper">
+<div class="a4-sheet-container" id="cv-container">
+    <div class="top-bar"></div> 
+    <div class="top-diag-bar"></div>
+    <div class="photo-placeholder" id="photo-preview" onclick="document.getElementById('photo-upload').click()">
+    </div>
+    <input type="file" id="photo-upload" class="photo-upload-input" accept="image/*" onchange="handlePhotoUpload(event)">
+
+    <div class="header-section">
+        <h1><input type="text" id="name-input" class="editable-field" placeholder="Your Name"></h1>
+        <p id="static-info-header">Personal Information</p> 
+    </div>
+
+    <div classs="input-fields-container">
+        <h1><input type="text" id="name-input" class="editable-field" placeholder="Your Name"></h1>
+        
+        <div class="cv-section personal-info">
+            <h2 id="persoInfo">Personal Information</h2>
+            <textarea id="about-me-input" class="editable-field" rows="2" placeholder="Short and Brief description about yourself"></textarea>
+        </div>
+        <div class="cv-section education">
+            <h2 id="education">Education</h2>
+            <input type="text" id="degree-input" class="editable-field" placeholder="Your Degree">
+            <input type="text" id="university-input" class="editable-field" placeholder="Your University">
+            <input type="text" id="year-input" class="editable-field" placeholder="Graduation Year">
+        </div>
+        
+        <div class="cv-section experience">
+            <h2 id="experience">Experience</h2>
+            <input type="text" id="position-input" class="editable-field" placeholder="Your Position">
+            <input type="text" id="company-input" class="editable-field" placeholder="Your Company">
+            <input type="text" id="duration-input" class="editable-field" placeholder="Duration">
+        </div>
+
+        <div class="cv-section skills">
+            <h2 id="skills">Skills</h2>
+            <input type="text" id="skill1-input" class="editable-field" placeholder="Your skill">
+            <input type="text" id="skill2-input" class="editable-field" placeholder="Your skill">
+            <input type="text" id="skill3-input" class="editable-field" placeholder="Your skill">
+        </div>
+
+        <div class="cv-section contact">
+            <h2 id="contact">Contact</h2>
+            <p id="email">Email:<input type="email" id="email-input" class="editable-field" placeholder="Your Email"></p>
+            <p id="phone">Phone:<input type="tel" id="phone-input" class="editable-field" placeholder="Your Phone Number"></p>
+        </div>
+
+        <div class="cv-section addiInfo">
+            <h2 id="addiInfo">Additional Information<br>and Achievments</h2>
+            <textarea id="description-input" class="editable-field" rows="4" placeholder="Achievments and Additional information"></textarea>
+        </div>
+    </div>
+</div>
+</div>
+<button class="downloadBtn" onclick="downloadCV()">Download Curriculum Vitae</button>
+</div>
+
+<script src="template_l.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae Maker</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="shortcut icon" type="image/jpg/png" href="images/LOGO-01.png"/>
+</head>
+<body>
+    <div class="siteTitle"><p>Curriculum Vitae Creator</p></div>
+    <div class="container-login" id="login">
+        <div class="login">
+            <label for="login-username">Username:</label><br>
+            <input type="text" id="login-username" name="username"><br>
+            <label for="login-password">Password:</label><br>
+            <input type="password" id="login-password" name="password">
+            <label for="showPass">Show Password</label><br>
+            <input type="checkbox" id="showPass" onchange="showPassword()"><br>
+            <button class="keybtn" onclick="checkPass()">Log In</button>
+        </div>
+        <div class="frgt-sgnp">
+            <button class="subBtn" onclick="forgotPassword()">Forgot password</button>
+            <button class="subBtn" onclick="openSignUp()">Create an Account</button>
+        </div>
+    </div>
+    <div class="container-signup" id="signup">
+        <div class="signup">
+            <label for="signup-username">Username:</label><br>
+            <input type="text" id="signup-username" name="username"><br>
+            <label for="signup-password">Password:</label><br>
+            <input type="password" id="signup-password" name="password" ><br>
+            <label for="showPass2">Show Password</label><br>
+            <input type="checkbox" id="showPass2" onchange="showPassword2()"><br>
+            <label for="signup-confpassword">Confirm Password:</label><br>
+            <input type="password" id="signup-confpassword" name="password"><br>
+            <label for="showPass3">Show Password</label><br>
+            <input type="checkbox" id="showPass3" onchange="showPassword3()"><br>
+            <button class="keybtn" onclick="createAcc()">Sign Up</button><br>
+            <button class="subBtn" onclick="openLogin()">Log In</button>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

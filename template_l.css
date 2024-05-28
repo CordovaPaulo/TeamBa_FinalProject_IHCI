@@ -1,0 +1,367 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  background-color: dimgray;
+}
+
+.hamMen {
+  position: absolute;
+  top: 50%;
+  right: 4vw;
+  transform: translateY(-50%);
+  transition: .2s;
+}
+
+.hamMen:hover {
+  right: 3.5vw;
+  width: 60px;
+  height: 60px;
+}
+
+.navCon {
+  position: fixed;
+  overflow: hidden;
+  height: 65px;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+
+}
+
+.nav {
+  position: absolute;
+  right: 10vw;
+  list-style: none;
+  display: flex;
+  visibility: visible;
+}
+
+#linkList {
+  display: none;
+}
+
+.nav li {
+  padding: 5px 25px;
+  font-size: 1.23rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.siteTitle{
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  font-size: 2rem;
+}
+
+.downloadBtn{
+  position: fixed;
+  border-radius: 10px;
+  filter: drop-shadow(#000 0px 0px 10px);
+  bottom: 5%;
+  left: 80%;
+  background-color: #ffcd29;
+  font-size: 1rem;
+  border: none;
+  padding: 15px;
+}
+
+.a4-sheet-container {
+  position: relative;
+  text-align: left;
+  flex-shrink: 0;
+  max-width: 90%;
+  width: 794px;
+  height: 1123px;
+  margin: 0 auto;
+  background-color: rgb(244, 237, 237);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar{
+  position: absolute;
+  background-color: rgb(84, 79, 78);
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 200px;
+}
+
+.top-diag-bar{
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  width: 1000vw; 
+  height: 100; 
+  border-top: 100px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-right: 2000px solid transparent;
+  border-left: 200px solid rgb(84, 79, 78);
+}
+
+.input-fields-container {
+  margin-left: 300px;
+  margin-top: 150px;
+  width: calc(100% - 100px);
+}
+
+.header-section {
+  top: 20px;
+  order: -1;
+  width: 100%;
+  margin-bottom: 30px;
+  left: 100px;
+}
+
+.header-section h1 {
+  margin-left: -15px;
+  width: auto;
+  text-align: left;
+}
+
+#name-input {
+  max-width: 500px;
+  position: absolute;
+  top: 25%;
+  left: -5%;
+  padding: 5px 10px;
+  margin: 0 auto;
+  display: block;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#persoInfo {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  width: auto;
+  text-align: left;
+  font-weight: bold;
+}
+#education{
+  position: absolute;
+  left: 20%;
+  top: 30%;
+}
+#experience {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
+#skills{
+  position: absolute;
+  left: 60%;
+  top: 30%;
+}
+#contact{
+  position: absolute;
+  left: 60%;
+  top: 50%;
+}
+.cv-section {
+  margin-left: 100px;
+  width: calc(100% - 100px);
+  margin-bottom: 20px;
+}
+
+.cv-section p {
+  margin: 5px 0;
+}
+
+.editable-field {
+  font-size: 14px;
+  border: none;
+  background-color:  rgb(244, 237, 237);
+  border-bottom: 1px solid rgb(244, 237, 237);
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+  
+.photo-placeholder {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  background-image: url('images/placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  top: 5%;
+  left: 13%;
+  position: absolute;
+  z-index: 1;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.photo-upload-input {
+  display: none;
+}
+
+.a4-sheet-container h1, 
+.a4-sheet-container h2,
+.a4-sheet-container p,
+.editable-field {
+  color: #111; /* Dark gray for better readability on the background */
+}
+.wrapper {
+    margin-top: 100px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    min-height: 100vh; /* Ensure wrapper takes full viewport height */
+    align-items: center; /* Horizontally center the resume container */
+  }
+  #name-input {
+    position: absolute;
+    top: 13%;
+    left: 45%;
+    width: 23vw;
+    background-color: rgb(84, 79, 78);
+    border-bottom: 1px solid rgb(84, 79, 78);
+    padding: 5px 10px;
+    margin: 0 auto;
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+#name-input::placeholder{
+  color:rgb(244, 237, 237);
+  opacity: .8;
+}
+
+#about-me-input {
+  position: absolute;
+  top: 22%;
+  left: 52%;
+  overflow: auto;
+  height: 60px;
+  font-size: 16px;
+  line-height: 1;
+  width: 350px;
+}
+
+#degree-input, #university-input, #year-input{
+  position: absolute;
+  left: 23%;
+  top: 35%;
+  width: 15vw;
+}
+
+#university-input {
+  top: 40%;
+}
+
+#year-input {
+  top: 45%;
+}
+
+#position-input, #company-input, #duration-input {
+  position: absolute;
+  left: 23%;
+  top: 55%;
+  width: 15vw;
+}
+
+#company-input {
+  top: 60%;
+}
+
+#duration-input {
+  top: 65%;
+}
+
+#skill1-input, #skill2-input, #skill3-input{
+  position: absolute;
+  left: 62%;
+  top: 35%;
+  width: 15vw;
+}
+
+#skill2-input{
+  top: 40%;
+}
+
+#skill3-input{
+  top: 45%;
+}
+#email, #phone {
+  position: absolute;
+  left: 62%;
+  top: 55%;
+}
+#phone {
+  top: 60%;
+}
+
+#email-input, #phone-input{
+  position: absolute;
+  left: 18%;
+  top: 100%;
+  width: 20vw;
+}
+
+#phone-input{
+  top: 100%;
+}
+
+#addiInfo{
+  position: absolute;
+  top: 69%;
+  left: 18%;
+  width: auto;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 34px;
+}
+
+#description-input{
+  position: absolute;
+  top: 78%;
+  left: 18%;
+  width: 40vw;
+  height: 35vh;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+      right: 5vw;
+  }
+
+  .toolNav {
+      width: 90%;
+  }
+
+  .toolNav li {
+      margin: auto 3vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav {
+      right: 2vw;
+  }
+
+  .toolNav {
+      width: 100%;
+  }
+
+  .toolNav li {
+      margin: auto 2vw;
+  }
+}
+
